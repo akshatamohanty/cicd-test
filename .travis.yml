@@ -4,4 +4,13 @@ node_js:
 install:
   - npm install
 script:
-  - npm test
+  - npm run test
+branches:
+  only:
+    - develop
+deploy:
+  provider: heroku
+  api_key:
+    secure: "QNw6IVI5gmARNRA4tOXI9L3OD6/babnZgfAKYJ62SOkaxLl+D22vGgl4KXrcvHfEyKHtYyr/TbEeMmcU6m954sW9S5f/EUCKctIYwoI7R0oNnOxvAghG2CXYIvU5k68kw4+VPzNB4QdtCmLKFYii70QRVzz9Z5vdg5ArH4AJHaorQy9djKQ2pG8X0PrIyFd6eI4SdCGOQg8MA63BlytmiryGm88ykO+sTmYXE1Rco+TxbbXYmSNhSJPeFqh7kvHzEuza/6JS++LwmcfKxHnYXtGZHlWnKj34+uDvpq7jTu+bzZAqnIOO+jR8xtp7jy1xKdiW7cUylZV+R4mIMMjcVlvfFNVhrKJjoNtVenQx3QWrIvs4UcaZaYG9ZXsTzdhvw6G7w+yDkofKP0mMD5pqT66XTBnImvVdm0eS4L8PdoVCyNxa+up4l98O8akM/IXC+v+TAh9PGC4fRnWuL6PAY0TnD/V9kbH8IsO26U1jSpURsDkNdv3yjQio9M+zGpL/qhU6j7zxYAnezXQNdzu0PHXZHdCUgIi3A1NitUDhfyk80y36IbXZerJcjsfc1yFMpYEheOku4TpT1EtIem0Nj789T2/maxkFWAwbg3k+97VLsWLxyx8//1CSI1w6QKwkg7GYUlnKtVzGKCLR8V/+Nl0Ja6MFRi3lc7KUfNelfqA="
+  app:
+    develop: techladies-cicd-2020-staging
